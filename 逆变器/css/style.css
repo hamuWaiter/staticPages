@@ -1,0 +1,601 @@
+
+.box{
+	width: 100%;
+	height: 100%;
+}
+.box .container{
+	width: 100%;
+	height: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+
+
+
+/* 头部 */
+.box .container .top{
+	height: 100px;
+	width: 100%;
+	padding:0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(0,0,255,.4);
+}
+.box .container .top .topleft{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.box .container .top .topleft img{
+	margin-right: 10px;
+	border-radius: 6px;
+}
+.box .container .top .topleft h1{
+	color: white;
+	letter-spacing: 8px;
+}
+.box .container .top .topleft h2{
+	font-size: 20px;
+	font-weight: 500;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	font-style: italic;
+	left: 102%;
+}
+.box .container .top .topright .nav ul{
+	display: flex;
+	
+}
+.box .container .top .topright .nav ul li{
+	opacity: 0.8;
+	line-height: 34px;
+	margin-left: 20px;
+	color:rgba(255,255,255,.8);
+
+}
+.box .container .top .topright .nav ul li:hover{
+	opacity: 1;
+}
+.box .container .top .topright .nav ul li a{
+	line-height: 34px;
+	color:rgba(255,255,255,1);
+}
+.box .container .top .topright .nav ul li a img{
+	margin-right: 2px;
+	position: relative;
+	top: 3px;
+}
+.box .container .top .topright .time{
+	display: flex;
+	justify-content: flex-end;
+}
+.box .container .top .topright .time p{
+	color: white;
+	font-size: 20px;
+}
+.box .container .top .topright .time span{
+	margin-left: 20px;
+	margin-right: 4px;
+}
+
+
+/* 侧边栏 */
+.box .container .main{
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+	}
+.box .container .main .aside{
+	flex:1.7;
+	border: 2px solid white;
+	background-color: rgba(0,255,255,.1);
+	height: 100%;
+}
+.box .container .main .aside .title{
+	background-color: rgba(0,0,255,.3);
+}
+.box .container .main .aside .title span{
+	display: block;
+	width: 80%;
+	line-height: 3em;
+	margin: 0 auto;
+	color: white;
+}
+.box .container .main .aside ul{
+	padding-top: 30px;
+	/* padding-bottom: 50px; */
+}
+.box .container .main .aside ul li{
+	background-color: #FFA500;
+	padding-left: 40px;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	line-height: 4em;
+	background: linear-gradient(rgba(255,255,255,.6) 50%,rgba(0,0,0,.1));
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
+.box .container .main .aside ul li:hover{
+	background-color: rgba(0,0,255,.6);
+}
+.box .container .main .aside ul li:hover a{
+	color: white;
+}
+.box .container .main .aside ul li a{
+	color: rgba(0,0,255,.6);
+	font-weight: 800;
+}
+.box .container .main .aside ul li a img{
+	margin-right: 10px;
+	position: relative;
+	top: 14px;
+}
+
+
+
+/* 显示主体区域 ，状态栏*/
+.box .container .main .content{
+	flex:8.3;
+}
+.box .container .main .content .status{
+	border: 2px solid white;
+	border-left:none ;
+	background-color: rgba(0,0,0,.1);
+}
+.box .container .main .content .status ul{
+	display: flex;
+	align-items: center;
+}
+.box .container .main .content .status ul li{
+	display: flex;
+	align-items: center;
+	margin:0 10px;
+}
+.box .container .main .content .status ul li span{
+	line-height: 3em;
+}
+.box .container .main .content .status ul li p{
+	color: red;
+	font-size: 18px;
+	font-weight: 500;
+}
+.box .container .main .content .status ul li button{
+	margin-right: 6px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: green;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.box .container .main .content .status ul li button:hover{
+	text-decoration: underline;
+	color: rgba(0,0,0,.8);
+}
+.box .container .main .content .status ul li img{
+	background-color:rgba(0,0,0,.6);
+	border-radius: 50%;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.box .container .main .content .status ul li img:hover{
+	background-color:rgba(255,255,255,.4);
+}
+
+
+
+
+/* 显示主体区域，点击切换区域 */
+.box .container .main .content .changearea{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.box .container .main .content .changearea ul li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* 参数画面 表格*/
+.box .container .main .content 
+.changearea .parameter .table{
+	width: 60%;
+	height: 40%;
+	margin: 0 auto;
+	text-align: center;
+	border: 3px solid rgba(0,255,255,.4);
+	border-collapse:collapse;
+}
+.box .container .main .content 
+.changearea .parameter .table caption h1{
+	line-height: 6em;
+	font-weight: 400;
+	color: darkcyan;
+}
+.box .container .main .content 
+.changearea .parameter .table .active{
+	background-color:rgba(0,255,255,.2) ;
+}
+.box .container .main 
+.content .changearea .parameter .table th,
+.box .container .main 
+.content .changearea .parameter .table td{
+	border: 1px solid rgba(0,255,255,.4);
+}
+
+
+
+
+
+/* 历史数据，表格 */
+.box .container .main .content 
+.changearea .history{
+	padding:0 20px;
+}
+.box .container .main .content 
+.changearea .history h1{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 4em;
+	color: rgba(0,0,255,.4);
+}
+.box .container .main .content 
+.changearea .history form input{
+	height: 30px;
+	margin-right: 30px;
+	width: 200px;
+}
+.box .container .main .content 
+.changearea .history form button{
+	height: 30px;
+	border: none;
+	width: 100px;
+	color: white;
+	border-radius: 4px;
+	background-color: darkcyan;
+	cursor: pointer;
+}
+.box .container .main .content 
+.changearea .history form button:hover{
+	opacity: 0.8;
+}
+.box .container .main .content 
+.changearea .history .table{
+	width: 100%;
+	height: 30%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+.box .container .main .content 
+.changearea .history .table th,
+.box .container .main .content 
+.changearea .history .table td{
+	border: 1px solid black;
+}
+.box .container .main .content 
+.changearea .history .table .active{
+	background-color: rgba(0,0,255,.1);
+}
+
+
+
+
+
+/* 报警查询 */
+.box .container .main .content 
+.changearea .warning h1{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 4em;
+	color: rgba(0,0,255,.4);
+}
+.box .container .main .content 
+.changearea .warning .table{
+	width: 60%;
+	margin: 0 auto;
+	height: 40%;
+}
+.box .container .main .content 
+.changearea .warning .table{
+	width: 80%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+.box .container .main .content 
+.changearea .warning .table th{
+	border: 1px solid black;
+	
+	}
+.box .container .main .content 
+.changearea .warning .table td{
+	border: 1px solid black;
+	color: red;
+}
+.box .container .main .content 
+.changearea .warning .pagebar{
+	width: 76%;
+	height: 80px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-left{
+	display: flex;	
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-left h2{
+	font-size: 16px;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-left h2:nth-of-type(1){
+	color: orange;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-left h2:nth-of-type(2){
+	color: red;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-left span{
+	color: green;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-right{
+	border: 1px solid rgba(0,0,0,.4);
+	border-radius: 4px;
+	display: flex;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-right a,
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-right span{
+	display: block;
+	padding: 4px 12px;
+}
+.box .container .main .content 
+.changearea .warning .pagebar .pagebar-right span{
+	background-color: rgba(0,0,0,.1);
+}
+.box .container .main .content 
+.changearea .warning .reset{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.box .container .main .content 
+.changearea .warning .reset button{
+	height: 30px;
+	border: none;
+	background-color: darkcyan;
+	color: white;
+	border-radius: 4px;
+	padding: 0 20px;
+}
+.box .container .main .content 
+.changearea .warning .reset button:hover{
+	opacity: 0.8;
+}
+
+
+
+
+
+
+/* 系统设置 */
+.box .container .main .content 
+.changearea .parameterSet h1{
+	text-align: center;
+	line-height:2em;
+	color: darkcyan;
+}
+
+.box .container .main .content 
+.changearea .system,
+.box .container .main .content 
+.changearea .parameterSet{
+	padding: 20px ;
+}
+.box .container .main .content 
+.changearea .system .item,
+.box .container .main .content 
+.changearea .parameterSet .item{
+	width: 100%;
+	padding-bottom:40px;
+}
+.box .container .main .content 
+.changearea .system .item .title,
+.box .container .main .content 
+.changearea .parameterSet .item .title{
+	width: 100%;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	margin-bottom: 20px;
+}
+.box .container .main .content 
+.changearea .system .item .title h1,
+.box .container .main .content 
+.changearea .parameterSet .title h1{
+	font-size: 24px;
+	display: inline;
+	padding: 0 10px;
+	color: rgba(0,0,0,.6);
+	border-bottom: 2px solid darkcyan;
+}
+.box .container .main .content 
+.changearea .system .item .body,
+.box .container .main .content 
+.changearea .parameterSet .item .body{
+	width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+.box .container .main .content 
+.changearea .system .item .active .dataset{
+	width: 100%;
+}
+.box .container .main .content 
+.changearea .system .item .dataset,
+.box .container .main .content 
+.changearea .parameterSet .item .dataset{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+.box .container .main .content 
+.changearea .system .item .dataset span,
+.box .container .main .content 
+.changearea .parameterSet .item .dataset span{
+	margin: 0 20px;
+}
+.box .container .main .content 
+.changearea .system .item .dataset label,
+.box .container .main .content 
+.changearea .parameterSet .item .dataset label{
+	width: 160px;
+	text-align: right;
+}
+.box .container .main .content 
+.changearea .system .item .dataset input,
+.box .container .main .content 
+.changearea .parameterSet .item .dataset input{
+	padding-left: 4px;
+	margin: 0 20px;
+	height: 30px;
+	width: 200px;
+}
+
+.box .container .main .content 
+.changearea .system .item button,
+.box .container .main .content 
+.changearea .parameterSet .item button,
+.box .container .main .content 
+.changearea .system .bottomBtn button{
+	cursor: pointer;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 18px;
+	padding: 10px 30px;
+	background-color: darkcyan;
+}
+.box .container .main .content 
+.changearea .system button:hover{
+	opacity: 0.8;
+}
+.box .container .main .content 
+.changearea .parameterSet button:hover{
+	opacity: 0.8;
+}
+.box .container .main .content 
+.changearea .system .bottomBtn{
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+.box .container .main .content 
+.changearea .system .item .leftBtn{
+	flex: 4;
+}
+.box .container .main .content 
+.changearea .system .item .rightBtn{
+	flex: 6;
+}
+
+
+
+.box .container .main .content 
+.changearea .run,
+.box .container .main .content 
+.changearea .user{
+	width: 100%;
+	padding: 20px;
+}
+.box .container .main .content 
+.changearea .run h1,
+.box .container .main .content 
+.changearea .user h1{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 4em;
+	color: rgba(0,0,255,.4);
+}
+.box .container .main .content 
+.changearea .run .table,
+.box .container .main .content 
+.changearea .user .table{
+	width: 100%;
+	height: 30%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+.box .container .main .content 
+.changearea .run .table th,
+.box .container .main .content 
+.changearea .user .table th,
+.box .container .main .content 
+.changearea .run .table td,
+.box .container .main .content 
+.changearea .user .table td{
+	border: 1px solid black;
+}
+.box .container .main .content 
+.changearea .run .table .active,
+.box .container .main .content 
+.changearea .user .table .active{
+	background-color: rgba(0,0,255,.1);
+}
+.box .container .main .content 
+.changearea .user .table  span{
+	color: darkcyan;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+
+/* 关于我们 */
+.box .container .main .content 
+.changearea .aboultUs{
+	width: 100%;
+	padding-top:140px;
+}
+.box .container .main .content 
+.changearea .aboultUs .container{
+	display: flex;
+}
+
+.box .container .main .content 
+.changearea .aboultUs .logo{
+	flex: 3;
+}
+.box .container .main .content 
+.changearea .aboultUs .logo img{
+	display: block;
+	margin: 0 auto;
+}
+.box .container .main .content 
+.changearea .aboultUs .content{
+	flex: 7;
+	line-height: 2em;
+}
+.box .container .main .content 
+.changearea .aboultUs .content h2{
+	font-size: 20px;
+	color: darkcyan;
+	line-height:3em;
+}

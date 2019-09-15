@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>详情页</title>
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+		<div class="box">
+			<div class="container">
+				<div class="top">
+					<div class="topleft">
+						<img src="../img/logo.PNG" alt="" height="42px">
+						<h1>逆变器远程控制系统</h1>
+						<h2>v1.0</h2>
+					</div>
+					<div class="topright">
+						<div class="nav">
+							<ul>
+								<li>欢迎您，admin</li>
+								<li>
+									<a href="../login.html">
+										<img src="../img/注销.png" alt="">
+										<span>注销</span>
+									</a>
+								</li>
+								<li>
+									<a href="../login.html">
+										<img src="../img/帮助.png" alt="">
+										<span>帮助</span>
+									</a>
+								</li>
+								<li id="aboultUs">
+									<a href="javascript:void(0)">
+										<img src="../img/关于.png" alt="">
+										<span>关于</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="time">
+							<p>2019年7月6日<span>21:32</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<div class="aside">
+						<div class="title">
+							<span>系统功能</span>
+						</div>
+						<ul>
+							<li>
+								<a href="#">
+									<img src="../img/首页-选中.png" alt="">
+									<span>首页</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="../img/参数列表.png" alt="">
+									<span>参数画面</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="../img/时间.png" alt="">
+									<span>历史数据</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="../img/警告.png" alt="">
+									<span>报警查询</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="../img/设置.png" alt="">
+									<span>系统设置</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="../img/运行.png" alt="">
+									<span>运行记录</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="../img/用户.png" alt="">
+									<span>用户管理</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="status">
+							<ul>
+								<li>
+									<span>系统状态：</span>
+									<button type="button" onclick="confirm('确认切换到本地吗？')">远程</button>
+									<button type="button">手动</button>
+									<img src="../img/电源.png" alt="">
+								</li>
+								<span style="font-size: 20px;color: green;margin: 0 10px;">|</span>
+								<li>
+									<span>逆变器温度：</span>
+									<p style="color: green;">36.8℃</p>
+								</li>
+								<span style="font-size: 20px;color: green;margin: 0 10px;">|</span>
+								<li>
+									<span>日发电：</span>
+									<p>268度</p>
+								</li>
+								<span style="font-size: 20px;color: green;margin: 0 10px;">|</span>
+								<li>
+									<span>累计发电：</span>
+									<p>625度</p>
+								</li>
+							</ul>
+						</div>
+						<div class="changearea">
+							<ul>
+								<!-- 首页 -->
+								<li class="home" style="display: none;">
+									<img src="../img/蒲公英.jpg" width="100%">
+								</li>
+								<!-- 参数画面 -->
+								<li class="parameter" style="display: none;">
+									<table class="table">
+										<caption>
+											<h1>常用参数表</h1>
+										</caption>
+										<tr>
+											<th colspan="2">逆变器接口电压</th>
+											<th colspan="4">逆变器</th>
+										</tr>
+										<tr class="active">
+											<td>直流电压</td>
+											<td>0V</td>
+											<td>输出电压</td>
+											<td>0V</td>
+											<td>日发电量</td>
+											<td>0度</td>
+										</tr>
+										<tr>
+											<td>网测电压</td>
+											<td>0V</td>
+											<td>输出电流</td>
+											<td>0A</td>
+											<td>月发电量</td>
+											<td>0度</td>
+										</tr>
+										<tr class="active">
+											<td colspan="2">逆变器检测温度</td>
+											<td>输出功率</td>
+											<td>0kw</td>
+											<td>累计发电量</td>
+											<td>0度</td>
+										</tr>
+										<tr>
+											<td>风机入口温度</td>
+											<td>0.0℃</td>
+											<td>功率因数</td>
+											<td>0.00</td>
+											<td>CO2减排量</td>
+											<td>0kg</td>
+										</tr>
+										<tr class="active">
+											<td>逆变器温度</td>
+											<td>0.0℃</td>
+											<td>输出频率</td>
+											<td>0HZ</td>
+											<td>日出时间</td>
+											<td>0:00</td>
+										</tr>
+										<tr>
+											<td colspan="2">累积发电时间</td>
+											<td colspan="2">0时0分</td>
+											<td>日落时间</td>
+											<td>0:00</td>
+										</tr>
+									</table>
+								</li>
+								<!-- 历史数据 -->
+								<li class="history" style="display: none;">
+									<h1>自定义查询</h1>
+									<form action="">
+										<label>开始时间：</label>
+										<input type="date" min="2015-09-16" max="2032-07-07" />
+										<label>结束时间：</label>
+										<input type="date" min="2015-09-16" max="2032-07-07" />
+										<button type="submit">查询</button>
+									</form>
+									<h1>历史数据</h1>
+									<table class="table">
+										<tr class="active">
+											<th>时间</th>
+											<th>AC电压</th>
+											<th>AC电流</th>
+											<th>AC功率</th>
+											<th>AC频率</th>
+											<th>功率因数</th>
+											<th>AB线电压</th>
+											<th>BC线电压</th>
+											<th>DC电压</th>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr class="active">
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr class="active">
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+									</table>
+								</li>
+								<!-- 报警查询 -->
+								<li class="warning" style="display: none;">
+									<h1>历史故障报警</h1>
+									<table class="table">
+										<tr>
+											<th>日期</th>
+											<th>时间</th>
+											<th>对象名</th>
+											<th>当前值</th>
+											<th>报警描述</th>
+										</tr>
+										<tr>
+											<td>2014/09/01</td>
+											<td>8:31:57</td>
+											<td>Udisk_warn</td>
+											<td>0</td>
+											<td>U盘丢失报警</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+										<tr>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+											<td>占位符</td>
+										</tr>
+									</table>
+									<div class="pagebar">
+										<div class="pagebar-left">
+											<h2>
+												当前故障代码：<span style="margin-right: 10px;">0</span>
+											</h2>
+											<h2>
+												当前报警代码：<span>0</span>
+											</h2>
+										</div>
+										<div class="pagebar-right">
+											<a href="#">&lt;</a>
+											<span>1</span>
+											<a href="#">&gt;</a>
+										</div>
+									</div>
+									<div class="reset">
+										<button type="reset">故障复位</button>
+									</div>
+								</li>
+								<!-- 系统设置 -->
+								<li class="system" style="display: none;">
+									<div class="item">
+										<div class="title">
+											<h1>参数设置</h1>
+										</div>
+										<div class="body">
+											<div class="dataset">
+												<label>启动电压设置</label>
+												<input type="text" value="580.0V">
+											</div>
+											<div class="dataset">
+												<label>软启功率变化率</label>
+												<input type="text" value="9000W/s">
+											</div>
+											<div class="dataset">
+												<label>Modbus地址设定</label>
+												<input type="text" value="1" style="display: block;width: 60px;">
+												<p>
+													当前地址:<span style="color: red;">1</span>
+												</p>
+											</div>
+											<div class="dataset">
+												<label>有功功率输出限</label>
+												<input type="text" value="0kW">
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="title">
+											<h1>功率调节</h1>
+										</div>
+										<div class="active">
+											<div class="dataset">
+												<label>功率因数设定</label>
+												<input type="text" value="1.00">
+												<p>
+													当前功率因数:<span style="color: red;">0.00</span>
+												</p>
+											</div>
+											<div class="dataset">
+												<label>无功功率设定</label>
+												<input type="text" value="0kVar">
+												<p>
+													当前无功功率:<span style="color: red;">0.0kVar</span>
+												</p>
+												<p>
+													因数功率:<span style="color: red;">已禁用</span>
+												</p>
+												<button type="button">开启补偿</button>
+											</div>
+										</div>
+									</div>
+									<div class="item" style="border-bottom: 1px solid rgba(0,0,0,.2);">
+										<div class="title">
+											<h1>防孤岛与低电压穿越</h1>
+										</div>
+										<div class="body">
+											<div class="dataset">
+												<label>防孤岛</label>
+												<span style="color: red;">已启用</span>
+
+												<button type="button">禁用</button>
+											</div>
+											<div class="dataset">
+												<label>低电压穿越</label>
+												<span style="color: red;">已启用</span>
+
+												<button type="button">禁用</button>
+											</div>
+										</div>
+									</div>
+									<div class="bottomBtn">
+										<div class="leftBtn">
+											<button type="button" onclick="alert(this.innerHTML+'成功')">保存参数</button>
+										</div>
+										<div class="rightBtn">
+											<button type="button" id="parameterSet">参数查询与设置</button>
+											<button type="button" onclick="confirm('确定要清除'+this.innerHTML+'吗？')">清日电量</button>
+											<button type="button" onclick="confirm('确定要清除'+this.innerHTML+'吗？')">清月电量</button>
+											<button type="button" onclick="confirm('确定要清除'+this.innerHTML+'吗？')">清历史电量</button>
+										</div>
+									</div>
+								</li>
+
+								<!-- 运行记录 -->
+								<li class="run" style="display: none;">
+									<h1>运行记录</h1>
+									<table class="table">
+										<tr class="active">
+											<th>日期</th>
+											<th>时间</th>
+											<th>指示灯状态</th>
+											<th>逆变器状态</th>
+											<th>运行描述</th>
+										</tr>
+										<tr>
+											<td>2019/07/07</td>
+											<td>17:00:00</td>
+											<td>未亮</td>
+											<td>停止</td>
+											<td>未并网</td>
+										</tr>
+										<tr>
+											<td>2019/07/07</td>
+											<td>17:00:00</td>
+											<td>未亮</td>
+											<td>停止</td>
+											<td>未并网</td>
+										</tr>
+										<tr>
+											<td>2019/07/07</td>
+											<td>17:00:00</td>
+											<td>未亮</td>
+											<td>停止</td>
+											<td>未并网</td>
+										</tr>
+									</table>
+
+								</li>
+								<!--  用户管理 -->
+								<li class="user" style="display: none;">
+									<h1>用户管理</h1>
+									<table class="table">
+										<tr class="active">
+											<th>用户名</th>
+											<th>密码</th>
+											<th>描述</th>
+											<th>操作</th>
+										</tr>
+										<tr>
+											<td>operator</td>
+											<td></td>
+											<td>默认登录用户名</td>
+											<td>
+												<span>编辑</span>
+
+											</td>
+										</tr>
+										<tr>
+											<td>admin</td>
+											<td>123456</td>
+											<td>高级管理人员使用</td>
+											<td>
+												<span>编辑</span>
+
+											</td>
+										</tr>
+										<tr>
+											<td>degug</td>
+											<td>000000</td>
+											<td>内部调试使用</td>
+											<td>
+												<span>编辑</span>
+											</td>
+										</tr>
+									</table>
+								</li>
+								
+								<!-- 参数查询与设置 -->
+								<li class="parameterSet" style="display: none;">
+									<h1>参数查询与设置</h1>
+									<div class="item">
+										<div class="title">
+											<h1>CU参数读取</h1>
+										</div>
+										<div class="body">
+											<div class="dataset">
+												<label>参数号:</label>
+												<span>0</span>
+											</div>
+											<div class="dataset">
+												<label>数值:</label>
+												<span>0</span>
+											</div>
+											<div class="dataset">
+												<label>index序号:</label>
+												<span>0</span>
+											</div>
+											<div class="dataset">
+												<label>读取结果:</label>
+												<span style="color: green;">读取成功</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="title">
+											<h1>ALM参数读取</h1>
+										</div>
+										<div class="body">
+											<div class="dataset">
+												<label>参数号:</label>
+												<span>0</span>
+											</div>
+											<div class="dataset">
+												<label>数值:</label>
+												<span>0</span>
+											</div>
+											<div class="dataset">
+												<label>index序号:</label>
+												<span>0</span>
+											</div>
+											<div class="dataset">
+												<label>读取结果:</label>
+												<span style="color: green;">读取成功</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="title">
+											<h1>ALM参数设置</h1>
+										</div>
+										<div class="body">
+											<div class="dataset">
+												<label>参数号:</label>
+												<input type="text" value="0">
+											</div>
+											<div class="dataset">
+												<label>数值:</label>
+												<input type="text" value="0">
+											</div>
+											<div class="dataset">
+												<label>index序号:</label>
+												<input type="text" value="0">
+											</div>
+											<div class="dataset">
+												<button type="button" style="margin-left: 250px;" onclick="alert(this.innerHTML+'成功')">保存参数</button>
+											</div>
+										</div>
+										<button type="button" style="margin-top: 20px;" id="return">返回</button>
+									</div>
+								</li>
+								
+								
+								<!-- 关于我们 -->
+								<li class="aboultUs" style="display: none;">
+									<div class="container">
+										<div class="logo">
+											<img src="../img/logo.PNG" alt="">
+										</div>
+										<div class="content">
+											<h2>逆变器有功无功远程控制软件</h2>
+											<p>北京瑞和新能电气技术有限公司</p>
+											<p>版权所有：保留所有版权</p>
+											<p>联系电话：<strong>010-82512761</strong></p>
+											<p>网址：www.re-watt.com</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var paraSet = document.getElementById("parameterSet"),
+				goback = document.getElementById("return"),
+				aboult = document.getElementById("aboultUs"),
+				aLink = document.querySelectorAll(".box .container .main .aside ul li"),
+				aLi = document.querySelectorAll(".box .container .main .content .changearea li"),
+				flag = true;
+				
+				console.log(aboult);
+				
+				
+				function clear(){
+					// var txt = "确定要清除"+this.innerHTML+"吗?";
+					    cl = confirm("确定要清楚日电量吗？");
+				}
+			// 为每一个连接添加页面点击事件
+			aboult.onclick = function() {
+				var j = 0;
+				// 隐藏其他同辈元素
+				for(j = 0 ; j<aLi.length-1 ;j++) {
+					aLi[j].style.display = "none";
+				}
+				// 显示本元素
+				aLi[8].style.display = "block";
+			}
+			
+			aLi[0].style.display = "block";  //默认显示首页
+			
+			for (let i = 0; i < 7; i++) {
+				// 若使用var关键字声明
+				// aLi[i]一直都是aLi[7],而aLi总共6个,会报错aLi未定义
+				aLink[i].onclick = function() {
+					// 隐藏其他同辈元素
+					var j = 0;
+					for(j = 0 ; j<7 ;j++) {
+						aLi[j].style.display = "none";
+					}
+					// 隐藏参数查询与设置
+					aLi[7].style.display = "none";
+					// 隐藏关于我们
+					aLi[8].style.display = "none";
+					// 显示本元素
+					aLi[i].style.display = "block";
+				}
+			}
+			
+			// 系统设置中的参数查询以及设置的页面入口
+			paraSet.onclick = function(){parameterSet()};
+			// 返回系统设置
+			goback.onclick = function(){parameterSet()};
+			
+			function parameterSet() {
+				// 隐藏系统设置模块
+				aLi[4].style.display = "none";
+				// 进入参数查询与设置
+				if(flag){
+					// 显示参数查询与设置模块
+					aLi[7].style.display = "block";
+					flag = !flag;
+				}
+				// 返回参数设置
+				else{
+					// 隐藏参数查询与设置模块
+					aLi[7].style.display = "none";
+					// 显示系统设置模块
+					aLi[4].style.display = "block";
+					flag = !flag;
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>

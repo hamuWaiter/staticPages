@@ -1,0 +1,181 @@
+html,
+body {
+	height: 100%;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+.header,
+.second,
+.third,
+.four,
+.footer {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	background: url(../img/1.jpg) no-repeat center center;
+}
+
+.second {
+	background: url(../img/小樱.jpg) no-repeat center center;
+}
+
+.third {
+	background: url(../img/cbed716a990e1382fdbaf835ee50f47f.jpg) no-repeat center center;
+}
+
+.four {
+	background: url(../img/腐团儿.jpg) no-repeat center center;
+}
+
+.footer {
+	background: url(../img/QQ图片20190628132108.png) no-repeat center center;
+}
+
+.header .container .img img {
+	display: block;
+	border-radius: 50%;
+}
+
+.second .container,
+.third .container,
+.header .container,
+.four .container,
+.footer .container {
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	color: pink;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.third .container {
+	color: darksalmon;
+}
+
+.four .container {
+	color: cyan;
+}
+
+.footer .container {
+	color: black;
+}
+
+.second .container .content,
+.third .container .content,
+.four .container .content,
+.footer .container .content {
+	width: 500px;
+}
+
+.second .container .content {
+	opacity: 0;
+}
+
+.third .container .content {
+	transform: scale(0.5);
+}
+
+.second .container .content h1,
+.third .container .content h1,
+.header .container .on h1,
+.four .container .content h1,
+.footer .container .content h1 {
+	line-height: 60px;
+	text-decoration: underline;
+}
+
+.second .container .content p,
+.third .container .content p,
+.header .container .on p,
+.four .container .content p,
+.footer .container .content p {
+	text-indent: 2em;
+	line-height: 30px;
+}
+
+.header .container .content {
+	width: 700px;
+	text-indent: 2em;
+	color: red;
+	transform: translateY(-50px);
+	opacity: 0;
+}
+
+.header .container .img{
+	opacity: 0;
+	animation: /* anim1 12s linear infinite */;
+}
+@keyframes anim1{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.on {
+	width: 700px;
+	text-indent: 2em;
+	color: red;
+	opacity: 0.6;
+	transform: translateY(0);
+	transition: all 1s;
+}
+.four .container .img{
+	animation: falldown 2s;
+} 
+@keyframes falldown{
+	from{
+		transform: translateY(-500px) rotate(0deg) scale(0.1);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0) rotate(360deg) scale(1);
+		opacity: 1;
+	}
+}
+.four .container .anim{
+	animation: fontanimi 2s;
+}
+@keyframes fontanimi{
+	from{
+		transform: translateX(200px) scale(0.6);
+	}
+	to{
+		transform: translateX(0) scale(1);
+	}
+}
+
+.footer .container .img{
+	background: url(../img/古风男.png) no-repeat top right;
+}
+.footer .container .img img{
+	animation: anim2 2s linear infinite;
+}
+@keyframes anim2{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}

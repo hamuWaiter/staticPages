@@ -1,0 +1,60 @@
+html,body{
+	height: 100%;
+}
+.box{
+	width: 100%;
+	height: 100%;
+}
+.box .container{
+	width: 1200px;
+	margin: 0 auto;
+	padding-top:10%;
+}
+.box .container .title{
+	text-align: center;
+	margin-bottom: 40px;
+}
+.box .container .content{
+	display: flex;
+	justify-content:space-between;
+}
+.box .container .content .img{
+	flex: 4;
+	margin-right: 20px;
+}
+.box .container .content .img img{
+	width: 600px;
+	border-radius: 50%;
+}
+.box .container .content .form{
+	float: right;
+	flex: 4;
+	border: 4px solid darkcyan;
+	padding:30px 40px;
+}
+.box .container .content .form form h1{
+	font-size: 24px;
+	color: orange;
+	line-height: 4em;
+}
+.box .container .content .form form input{
+	padding: 0 6px;
+	display: block;
+	width: 100%;
+	height: 30px;
+	margin: 10px 0 20px 0;
+}
+.box .container .content .form form .login{
+	border-radius: 4px;
+	padding:6px 20px;
+	font-size: 16px;
+	background-color: #008B8B;
+	border: none;
+}
+.box .container .content .form form .forgetpassword{
+	border: none;
+	font-size: 12px;
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+}
